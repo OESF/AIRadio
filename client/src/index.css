@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@source "./**/*.{tsx,ts}";
+
+:root {
+  --bg-base: #1c1c1c;
+  --bg-surface: rgba(38, 38, 38, 0.70);
+  --bg-surface-solid: #262626;
+  --border-glass: rgba(255, 255, 255, 0.10);
+  
+  --color-primary: #9d4edd;
+  --color-secondary: #00b4d8;
+  --color-success: #06d6a0;
+  --color-warning: #ffb703;
+  --color-danger: #ef476f;
+  
+  --neon-purple-glow: 0 0 15px rgba(157, 78, 221, 0.4);
+  --neon-blue-glow: 0 0 15px rgba(0, 180, 216, 0.4);
+  --neon-green-glow: 0 0 15px rgba(6, 214, 160, 0.4);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(157, 78, 221, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.04) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* スクロールバー */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* グラスモルフィズムカード */
+.glass-panel {
+  background: var(--bg-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* fieldset/legend 版グラスパネル */
+fieldset.glass-fieldset {
+  background: var(--bg-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 8px 20px 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+  width: 100%;
+  min-inline-size: 0;
+}
+
+fieldset.glass-fieldset:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+fieldset.glass-fieldset > legend {
+  background: var(--bg-base);
+  padding: 2px 10px;
+  margin-left: 6px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* タイポグラフィ */
+h1, h2, h3, .brand {
+  font-family: var(--font-display);
+  letter-spacing: 1px;
+}
+
+.text-neon-purple {
+  color: #c77dff;
+  text-shadow: 0 0 10px rgba(199, 125, 255, 0.5);
+}
+
+.text-neon-blue {
+  color: #90e0ef;
+  text-shadow: 0 0 10px rgba(144, 224, 239, 0.5);
+}
+
+/* チェックボックス・ラジオは width:auto を優先（全幅になるのを防ぐ） */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* 管理画面 丸角ボックス内側余白
+   Tailwind v4 dev モードで p-5〜p-8 が生成されないためここで定義 */
+.bp-5  { padding: 1.25rem; }  /* 20px */
+.bp-6  { padding: 1.5rem;  }  /* 24px */
+.bp-4  { padding: 1rem;    }  /* 16px */
+.bp-3  { padding: 0.75rem; }  /* 12px */
+
+/* 入力・フォーム */
+input, textarea, select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-secondary);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.2);
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+/* ボタン */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), #7b2cbf);
+  color: #fff;
+  box-shadow: var(--neon-purple-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(157, 78, 221, 0.6);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--color-secondary), #0077b6);
+  color: #fff;
+  box-shadow: var(--neon-blue-glow);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.6);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--color-danger), #d90429);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(239, 71, 111, 0.3);
+}
+
+.btn-danger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(239, 71, 111, 0.5);
+}
+
+.btn-dark {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+.btn-dark:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* インジケーター */
+.indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.indicator.active {
+  background-color: var(--color-success);
+  box-shadow: 0 0 10px var(--color-success);
+  animation: pulse 1.5s infinite;
+}
+
+.indicator.inactive {
+  background-color: #64748b;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* トースト通知 */
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);    }
+}
+@keyframes toast-out {
+  from { opacity: 1; transform: translateY(0)   scale(1);    }
+  to   { opacity: 0; transform: translateY(10px) scale(0.95); }
+}
+.toast-enter { animation: toast-in  0.25s ease-out forwards; }
+.toast-leave { animation: toast-out 0.3s  ease-in  forwards; }
+
+/* リアルタイムログ */
+.log-terminal {
+  background: #02040a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  overflow-y: auto;
+  color: #38bdf8;
+  min-height: 0; /* flex-1 で縮められるよう flex アイテムの最小高さを解除 */
+}
+
+.log-entry {
+  margin-bottom: 6px;
+  border-left: 2px solid transparent;
+  padding-left: 8px;
+}
+
+.log-entry.info { border-color: var(--color-secondary); color: #e2e8f0; }
+.log-entry.event { border-color: var(--color-success); color: #34d399; }
+.log-entry.warn { border-color: var(--color-warning); color: #fbbf24; }
+.log-entry.err { border-color: var(--color-danger); color: #f87171; }
+.log-entry.tts { border-color: var(--color-primary); color: #c084fc; }
+
+/* エージェントアバターグリッド */
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.agent-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.agent-card.active {
+  background: rgba(157, 78, 221, 0.05);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(157, 78, 221, 0.2);
+}
+
+.agent-card.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+.agent-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.agent-card.active .agent-avatar {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
+}

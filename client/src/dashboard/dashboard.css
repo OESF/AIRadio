@@ -1,0 +1,72 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   システム監視ダッシュボードの段組み（2026-09-15・三浦さんのご要望で見直し）
+
+   中身の見た目は各コンポーネントのインラインstyleで書いているが、画面幅に応じた
+   段組みの切り替え（メディアクエリ）はインラインでは書けないため、ここにだけ置く。
+
+   ・上段: Live／My Secretary／The Answers の3つを固定表示（情報量が多いので大きく）
+   ・中段: 情報量の少ない音楽チャンネルを小さなタイルで横一列（スクロールさせない）
+   ・下段: できごとの記録（ふだんは畳んで、注意が必要なものだけ出す）
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.dash-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* 上段の3パネルは高さを揃えて固定する（中身の量で高さが変わると画面がガタつくため。
+   2026-08-20の三浦さんのご指摘以来の方針）。あふれる分は各パネル内でスクロールする。 */
+.dash-main-panel {
+  height: 580px;
+}
+
+/* Liveパネルの中身: 左に「いま」と討論コーナー、右にディレクタの編成 */
+.dash-live-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+.dash-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.dash-scroll {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.dash-clamp-2,
+.dash-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+.dash-clamp-2 { -webkit-line-clamp: 2; }
+.dash-clamp-3 { -webkit-line-clamp: 3; }
+
+/* 幅が足りないときは Live を1段まるごと使い、残り2つをその下に並べる。
+   1366px幅で3列にすると Live の左半分が約300pxになり、話者名・編成の討論コーナー名が
+   途中で切れ、台本の列も2段に折り返した（2026-09-15に実測）。そのため 1440px で切り替える。 */
+@media (max-width: 1440px) {
+  .dash-main-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .dash-main-grid > .dash-live { grid-column: 1 / -1; }
+}
+
+@media (max-width: 1000px) {
+  .dash-sub-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .dash-main-grid,
+  .dash-live-body { grid-template-columns: minmax(0, 1fr); }
+  .dash-main-panel { height: auto; min-height: 420px; }
+  .dash-sub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

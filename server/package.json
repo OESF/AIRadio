@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "author": "Masataka Miura (Mark Brain Lab.)",
+  "contributors": [
+    "Antigravity",
+    "Anthropic Claude"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^2.21.0",
+    "better-sqlite3": "^12.11.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ffmpeg-static": "^5.3.0",
+    "gray-matter": "^4.0.3",
+    "lindera-wasm-unidic-nodejs": "^2.3.4",
+    "multer": "^2.2.0",
+    "pino": "^10.3.1",
+    "pino-roll": "^4.0.0",
+    "uuid": "^14.0.0",
+    "ws": "^8.21.0"
+  }
+}

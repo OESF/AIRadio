@@ -1,0 +1,15 @@
+{
+  "channel_id": "24you",
+  "program": {
+    "name": "24/You",
+    "name_reading": "トゥエンティフォー・ユー",
+    "description": "言葉はいらない。AIが選ぶ、あなたのための24時間。",
+    "selection_mode": "omakase",
+    "anokoro_age": 25,
+    "favorite_artists": [
+      "サザンオールスターズ"
+    ],
+    "language_pref": "japanese",
+    "wagamama_request": "梅雨時のジメジメした雨の日に聴きたい"
+  }
+}

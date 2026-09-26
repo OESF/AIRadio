@@ -1,0 +1,88 @@
+# Dependencies
+node_modules/
+server/node_modules/
+client/node_modules/
+
+# Build output
+client/dist/
+
+# Credentials (never commit API keys)
+server/data/credentials.json
+# リスナー本人の情報（氏名・生年月日・居住地・家族の記念日・保有銘柄）が入るため追跡しない。
+# 設定の雛形は server/data/config.example.json を参照。
+server/data/config.json
+server/data/finance-last-fund-quotes.json
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+/tmp/
+
+# 実行時データ（コミット不要）
+server/data/activity.db
+server/data/activity.db-shm
+server/data/activity.db-wal
+server/data/interrupt_pcm_cache.json
+server/data/conversation_history.jsonl
+# リスナーの明示的なリクエスト・アンコールの記録（実運用で溜まる行動ログ）
+server/data/listener_requests.jsonl
+server/data/conversation_history.jsonl.*
+server/data/life_advisor_history.json
+server/data/played_tracks.json
+server/data/world_report_cities.json
+server/data/long_term_memory.json
+server/data/director_queue_state.json
+server/data/weather_corner_notes.json
+server/data/traffic_corner_notes.json
+server/data/news_corner_notes.json
+server/data/finance_corner_notes.json
+server/data/journalist_corner_notes.json
+server/data/commentator_corner_notes.json
+server/data/legal_advisor_corner_notes.json
+server/data/world_report_corner_notes.json
+server/data/life_advisor_corner_notes.json
+# エージェントの継続観測メモ（実行時に生成されるローカルのデータ）。
+# 上の各行は1ファイルずつ名前を列挙しているが、2026-09-16に追加したゲスト論客3人の器は
+# lib/guest-agent-notes.js が `<キー>_notes.json`（_corner が付かない名前）へ書くため
+# 列挙から漏れ、marketer_notes.json が未追跡のまま git status に現れた。
+# 今後エージェントが増えても取りこぼさないよう、両方の命名をパターンでまとめて無視する。
+server/data/*_notes.json
+server/data/saved_recipes.json
+# 一覧から外したレシピの名前（実行時に作られるローカルの状態。Vault側は全件残っている）
+server/data/recipe_hidden.json
+# 予定・TODOの共有用の置き場所（個人の予定。lib/listener-context.js が再起動後も読めるよう保存する）
+server/data/listener_schedule.json
+# ディレクターの掲示板（各番組のディレクターが直近に決めた方針。lib/director-board.js）
+server/data/director_board.json
+server/data/dashboard-last-sessions.json
+server/data/channels/*/played_tracks.json
+server/data/channels/*/track_batch_cache.json
+server/data/channels/*/long_term_memory.json
+server/data/channels/the_answers/archive.json
+server/data/channels/the_answers/archive_audio/
+server/data/channels/the_answers/panel_history.json
+server/data/recordings/
+server/data/agent-diary/
+# エージェントの「分かったこと」の台帳（実行時に溜まる実データ。lib/agent-knowledge-ledger.js）
+server/data/agent-knowledge/
+# 日記フィードバック週次バッチの実行済み日付ゲート（実行時に生成されるローカルの状態）
+server/data/agent-diary-feedback-state.json
+server/data/secretary/
+# 拡張機能から届いた資産データ（個人の金融情報）
+server/data/finance-import/
+
+# Environment
+.env
+.env.local
+
+# Editor
+.vscode/
+.idea/
+
+# Claude Code local settings (personal tool permission grants)
+.claude/settings.local.json
+
+# Backup files
+*.bak

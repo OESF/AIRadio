@@ -1,0 +1,674 @@
+[
+  {
+    "id": 1,
+    "pattern": "NYダウ",
+    "flags": "g",
+    "replacement": "ニューヨークダウ",
+    "note": "株価指数",
+    "enabled": true
+  },
+  {
+    "id": 2,
+    "pattern": "NY\\s*ダウ",
+    "flags": "g",
+    "replacement": "ニューヨークダウ",
+    "note": "株価指数",
+    "enabled": true
+  },
+  {
+    "id": 3,
+    "pattern": "S&P\\s*500",
+    "flags": "g",
+    "replacement": "エスアンドピーゴヒャク",
+    "note": "株価指数",
+    "enabled": true
+  },
+  {
+    "id": 4,
+    "pattern": "S&P500",
+    "flags": "g",
+    "replacement": "エスアンドピーゴヒャク",
+    "note": "株価指数",
+    "enabled": true
+  },
+  {
+    "id": 5,
+    "pattern": "NASDAQ",
+    "flags": "gi",
+    "replacement": "ナスダック",
+    "note": "株価指数",
+    "enabled": true
+  },
+  {
+    "id": 6,
+    "pattern": "DAX",
+    "flags": "g",
+    "replacement": "ダックス",
+    "note": "株価指数",
+    "enabled": true
+  },
+  {
+    "id": 7,
+    "pattern": "FTSE",
+    "flags": "g",
+    "replacement": "フッツィー",
+    "note": "株価指数",
+    "enabled": true
+  },
+  {
+    "id": 8,
+    "pattern": "NYSE",
+    "flags": "g",
+    "replacement": "ニューヨーク証券取引所",
+    "note": "市場",
+    "enabled": true
+  },
+  {
+    "id": 9,
+    "pattern": "TSE",
+    "flags": "g",
+    "replacement": "東証",
+    "note": "市場",
+    "enabled": true
+  },
+  {
+    "id": 10,
+    "pattern": "JPX",
+    "flags": "g",
+    "replacement": "ジェイピーエックス",
+    "note": "市場",
+    "enabled": true
+  },
+  {
+    "id": 11,
+    "pattern": "USD/JPY",
+    "flags": "g",
+    "replacement": "ドル円",
+    "note": "為替",
+    "enabled": true
+  },
+  {
+    "id": 12,
+    "pattern": "EUR/JPY",
+    "flags": "g",
+    "replacement": "ユーロ円",
+    "note": "為替",
+    "enabled": true
+  },
+  {
+    "id": 13,
+    "pattern": "EUR/USD",
+    "flags": "g",
+    "replacement": "ユーロドル",
+    "note": "為替",
+    "enabled": true
+  },
+  {
+    "id": 14,
+    "pattern": "GBP",
+    "flags": "g",
+    "replacement": "ポンド",
+    "note": "通貨",
+    "enabled": true
+  },
+  {
+    "id": 15,
+    "pattern": "CNY",
+    "flags": "g",
+    "replacement": "人民元",
+    "note": "通貨",
+    "enabled": true
+  },
+  {
+    "id": 16,
+    "pattern": "BTC",
+    "flags": "g",
+    "replacement": "ビットコイン",
+    "note": "暗号資産",
+    "enabled": true
+  },
+  {
+    "id": 17,
+    "pattern": "ETH",
+    "flags": "g",
+    "replacement": "イーサリアム",
+    "note": "暗号資産",
+    "enabled": true
+  },
+  {
+    "id": 18,
+    "pattern": "GDP",
+    "flags": "g",
+    "replacement": "ジーディーピー",
+    "note": "経済指標",
+    "enabled": true
+  },
+  {
+    "id": 19,
+    "pattern": "CPI",
+    "flags": "g",
+    "replacement": "シーピーアイ",
+    "note": "経済指標",
+    "enabled": true
+  },
+  {
+    "id": 20,
+    "pattern": "PPI",
+    "flags": "g",
+    "replacement": "ピーピーアイ",
+    "note": "経済指標",
+    "enabled": true
+  },
+  {
+    "id": 21,
+    "pattern": "ETF",
+    "flags": "g",
+    "replacement": "イーティーエフ",
+    "note": "金融商品",
+    "enabled": true
+  },
+  {
+    "id": 22,
+    "pattern": "IPO",
+    "flags": "g",
+    "replacement": "アイピーオー",
+    "note": "金融",
+    "enabled": true
+  },
+  {
+    "id": 23,
+    "pattern": "FRB",
+    "flags": "g",
+    "replacement": "エフアールビー",
+    "note": "中央銀行",
+    "enabled": true
+  },
+  {
+    "id": 24,
+    "pattern": "FED",
+    "flags": "g",
+    "replacement": "フェド",
+    "note": "中央銀行",
+    "enabled": true
+  },
+  {
+    "id": 25,
+    "pattern": "BOJ",
+    "flags": "g",
+    "replacement": "日銀",
+    "note": "中央銀行",
+    "enabled": true
+  },
+  {
+    "id": 26,
+    "pattern": "ECB",
+    "flags": "g",
+    "replacement": "イーシービー",
+    "note": "中央銀行",
+    "enabled": true
+  },
+  {
+    "id": 27,
+    "pattern": "IMF",
+    "flags": "g",
+    "replacement": "アイエムエフ",
+    "note": "国際機関",
+    "enabled": true
+  },
+  {
+    "id": 28,
+    "pattern": "AI",
+    "flags": "g",
+    "replacement": "エーアイ",
+    "note": "テクノロジー",
+    "enabled": true
+  },
+  {
+    "id": 29,
+    "pattern": "IT",
+    "flags": "g",
+    "replacement": "アイティー",
+    "note": "テクノロジー",
+    "enabled": true
+  },
+  {
+    "id": 30,
+    "pattern": "ICT",
+    "flags": "g",
+    "replacement": "アイシーティー",
+    "note": "テクノロジー",
+    "enabled": true
+  },
+  {
+    "id": 31,
+    "pattern": "DX",
+    "flags": "g",
+    "replacement": "デジタルトランスフォーメーション",
+    "note": "テクノロジー",
+    "enabled": true
+  },
+  {
+    "id": 32,
+    "pattern": "SNS",
+    "flags": "g",
+    "replacement": "エスエヌエス",
+    "note": "テクノロジー",
+    "enabled": true
+  },
+  {
+    "id": 33,
+    "pattern": "API",
+    "flags": "g",
+    "replacement": "エーピーアイ",
+    "note": "テクノロジー",
+    "enabled": true
+  },
+  {
+    "id": 34,
+    "pattern": "AWS",
+    "flags": "g",
+    "replacement": "エーダブリューエス",
+    "note": "テクノロジー",
+    "enabled": true
+  },
+  {
+    "id": 35,
+    "pattern": "GCP",
+    "flags": "g",
+    "replacement": "ジーシーピー",
+    "note": "テクノロジー",
+    "enabled": true
+  },
+  {
+    "id": 36,
+    "pattern": "PM\\s*(\\d)",
+    "flags": "g",
+    "replacement": "午後$1時",
+    "note": "時刻",
+    "enabled": true
+  },
+  {
+    "id": 37,
+    "pattern": "AM\\s*(\\d)",
+    "flags": "g",
+    "replacement": "午前$1時",
+    "note": "時刻",
+    "enabled": true
+  },
+  {
+    "id": 38,
+    "pattern": "km",
+    "flags": "g",
+    "replacement": "キロメートル",
+    "note": "単位",
+    "enabled": true
+  },
+  {
+    "id": 39,
+    "pattern": "kg",
+    "flags": "g",
+    "replacement": "キログラム",
+    "note": "単位",
+    "enabled": true
+  },
+  {
+    "id": 40,
+    "pattern": "°C",
+    "flags": "g",
+    "replacement": "度",
+    "note": "単位",
+    "enabled": true
+  },
+  {
+    "id": 41,
+    "pattern": "%",
+    "flags": "g",
+    "replacement": "パーセント",
+    "note": "単位",
+    "enabled": true
+  },
+  {
+    "id": 42,
+    "pattern": "洋二",
+    "flags": "g",
+    "replacement": "ヨウジ",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 43,
+    "pattern": "NZ",
+    "flags": "g",
+    "replacement": "ニュージーランド",
+    "note": "国名",
+    "enabled": true
+  },
+  {
+    "id": 44,
+    "pattern": "表に出ていない",
+    "flags": "g",
+    "replacement": "オモテニデテイナイ",
+    "note": "表現",
+    "enabled": true
+  },
+  {
+    "id": 45,
+    "pattern": "メインMC",
+    "flags": "g",
+    "replacement": "メインエムシー",
+    "note": "英単語",
+    "enabled": true
+  },
+  {
+    "id": 46,
+    "pattern": "ははは！",
+    "flags": "g",
+    "replacement": "ハハハッ",
+    "note": "擬音",
+    "enabled": true
+  },
+  {
+    "id": 47,
+    "pattern": "午前",
+    "flags": "g",
+    "replacement": "ゴゼン",
+    "note": "時刻",
+    "enabled": true
+  },
+  {
+    "id": 48,
+    "pattern": "午後",
+    "flags": "g",
+    "replacement": "ゴゴ",
+    "note": "時刻",
+    "enabled": true
+  },
+  {
+    "id": 49,
+    "pattern": "Official髭男dism",
+    "flags": "g",
+    "replacement": "オフィシャルヒゲダンディズム",
+    "note": "歌手名",
+    "enabled": true
+  },
+  {
+    "id": 50,
+    "pattern": "絶賛勉強中",
+    "flags": "g",
+    "replacement": "ゼッサンベンキョウチュウ",
+    "note": "表現",
+    "enabled": true
+  },
+  {
+    "id": 51,
+    "pattern": "お出かけの方",
+    "flags": "g",
+    "replacement": "オデカケノカタ",
+    "note": "会話",
+    "enabled": true
+  },
+  {
+    "id": 52,
+    "pattern": "ひと時",
+    "flags": "g",
+    "replacement": "ヒトトキ",
+    "note": "会話",
+    "enabled": true
+  },
+  {
+    "id": 54,
+    "pattern": "平野ドレミ",
+    "flags": "g",
+    "replacement": "ヒラノドレミ",
+    "note": "氏名",
+    "enabled": true
+  },
+  {
+    "id": 55,
+    "pattern": "爽快な曲",
+    "flags": "g",
+    "replacement": "ソウカイナキョク",
+    "note": "会話",
+    "enabled": true
+  },
+  {
+    "id": 56,
+    "pattern": "中立公",
+    "flags": "g",
+    "replacement": "チュウリツコウ",
+    "note": "政治",
+    "enabled": true
+  },
+  {
+    "id": 57,
+    "pattern": "曲",
+    "flags": "g",
+    "replacement": "キョク",
+    "note": "会話",
+    "enabled": true
+  },
+  {
+    "id": 58,
+    "pattern": "通行止め",
+    "flags": "g",
+    "replacement": "ツウコウドメ",
+    "note": "交通",
+    "enabled": true
+  },
+  {
+    "id": 59,
+    "pattern": "（笑）",
+    "flags": "g",
+    "replacement": "ワッハッハ",
+    "note": "擬音",
+    "enabled": true
+  },
+  {
+    "id": 60,
+    "pattern": "星々が瞬く",
+    "flags": "g",
+    "replacement": "ホシボシガマタタク",
+    "note": "会話",
+    "enabled": true
+  },
+  {
+    "id": 61,
+    "pattern": "高市 苗",
+    "flags": "g",
+    "replacement": "タカイチ ナエ",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 62,
+    "pattern": "メインエムシーの私",
+    "flags": "g",
+    "replacement": "メインエムシーノマックス",
+    "note": "名前の紹介",
+    "enabled": true
+  },
+  {
+    "id": 63,
+    "pattern": "東 亜樹",
+    "flags": "g",
+    "replacement": "アズマ アキ",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 64,
+    "pattern": "季乃彩",
+    "flags": "g",
+    "replacement": "トキノイロドリ",
+    "note": "店舗名",
+    "enabled": true
+  },
+  {
+    "id": 65,
+    "pattern": "秋桜",
+    "flags": "g",
+    "replacement": "コスモス",
+    "note": "固有名詞",
+    "enabled": true
+  },
+  {
+    "id": 66,
+    "pattern": "東亜樹",
+    "flags": "g",
+    "replacement": "アズマアキ",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 67,
+    "pattern": "見せ所",
+    "flags": "g",
+    "replacement": "ミセドコロ",
+    "note": "会話",
+    "enabled": true
+  },
+  {
+    "id": 68,
+    "pattern": "10時",
+    "flags": "g",
+    "replacement": "ジュウジ",
+    "note": "時刻",
+    "enabled": true
+  },
+  {
+    "id": 69,
+    "pattern": "静寂のスコア",
+    "flags": "g",
+    "replacement": "シジマノスコア",
+    "note": "固有名詞",
+    "enabled": true
+  },
+  {
+    "id": 70,
+    "pattern": "小澤征三",
+    "flags": "g",
+    "replacement": "オザワセイゾウ",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 71,
+    "pattern": "Ado",
+    "flags": "g",
+    "replacement": "アド",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 73,
+    "pattern": "白馬村",
+    "flags": "g",
+    "replacement": "ハクバムラ",
+    "note": "地名",
+    "enabled": true
+  },
+  {
+    "id": 74,
+    "pattern": "水上の音楽",
+    "flags": "g",
+    "replacement": "スイジョウノオンガク",
+    "note": "楽曲名",
+    "enabled": true
+  },
+  {
+    "id": 75,
+    "pattern": "The Answers",
+    "flags": "g",
+    "replacement": "ジ・アンサーズ",
+    "note": "番組名",
+    "enabled": true
+  },
+  {
+    "id": 79,
+    "pattern": "択捉島",
+    "flags": "g",
+    "replacement": "エトロフトウ",
+    "note": "地名",
+    "enabled": true
+  },
+  {
+    "id": 80,
+    "pattern": "公の場",
+    "flags": "g",
+    "replacement": "オオヤケノバ",
+    "note": "表現",
+    "enabled": true
+  },
+  {
+    "id": 81,
+    "pattern": "次世代",
+    "flags": "g",
+    "replacement": "ジセダイ",
+    "note": "会話",
+    "enabled": true
+  },
+  {
+    "id": 82,
+    "pattern": "羽田空港",
+    "flags": "g",
+    "replacement": "ハネダクウコウ",
+    "note": "地名",
+    "enabled": true
+  },
+  {
+    "id": 83,
+    "pattern": "難波亭\\s*ボケ",
+    "flags": "g",
+    "replacement": "ナンパテイボケ",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 84,
+    "pattern": "難波亭",
+    "flags": "g",
+    "replacement": "ナンパテイ",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 85,
+    "pattern": "華院\\s*麗子",
+    "flags": "g",
+    "replacement": "カインレイコ",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 86,
+    "pattern": "華院",
+    "flags": "g",
+    "replacement": "カイン",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 87,
+    "pattern": "世界\\s*創",
+    "flags": "g",
+    "replacement": "セカイソウ",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 88,
+    "pattern": "創さん",
+    "flags": "g",
+    "replacement": "ソウサン",
+    "note": "人名",
+    "enabled": true
+  },
+  {
+    "id": 89,
+    "pattern": "常備薬",
+    "flags": "g",
+    "replacement": "ジョウビヤク",
+    "note": "名詞",
+    "enabled": true
+  }
+]
