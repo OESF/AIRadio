@@ -53,7 +53,7 @@ export function ListenerInfoTab({
             onChange={e => setConfig({ ...config, show: { ...config.show, user_profile: { ...config.show.user_profile, short_name: e.target.value } } })}
           />
           <p className="text-xs text-gray-500 mt-1">
-            設定すると、My Secretaryはフルネームの代わりにこちらで呼びかけます（例: 「三浦さん」）。
+            設定すると、My Secretaryはフルネームの代わりにこちらで呼びかけます（例: 「ヤマダさん」）。
             「さん」は付けずに入力してください。フルネームは読み方の指定が難しく誤読しやすいため、
             苗字など発音の安定する短い呼び方に切り替える用途を想定しています。未設定ならフルネームを使用します。
           </p>

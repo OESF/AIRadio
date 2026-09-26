@@ -49,7 +49,7 @@ export const SECRETARY_PLAYBACK_WORKLET = `
 class SecretaryPlaybackProcessor extends AudioWorkletProcessor {
   constructor() {
     super();
-    // 【バグ修正・2026-08-21・三浦さんの実地報告】長い回答の読み上げが最後の方で途切れる
+    // BUGFIX: 長い回答の読み上げが最後の方で途切れる
     // 不具合の原因はここだった。以前は容量を「24000 * 30（30秒分）」の固定長にしており、
     // 満杯になると書き込み側で Math.min(src.length, free) により**溢れた分を黙って捨てて**
     // いた。Gemini Liveは音声を実時間より速く生成して送ってくるため（放送ミキサー側の

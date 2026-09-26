@@ -51,7 +51,7 @@ Google Slidesのデッキが出来上がる機能）を、どこをどう触れ�
 
 **Google Drive上の実ファイル**。ローカルには存在しない。
 
-- 実体: 三浦さんのGoogle Driveにある「AI Radio Presentation Template」というSlidesファイル
+- 実体: リスナーのGoogle Driveにある「AI Radio Presentation Template」というSlidesファイル
 - ID: `secretary-tools-presentation.js` の `TEMPLATE_PRESENTATION_ID` 定数が指している
 - 中身: 6枚のスライド（`layout_title` / `layout_bullet` / `layout_comparison` /
   `layout_kpi` / `layout_chart` / `layout_image`）が「レイアウトの見本帳」として並んでいる

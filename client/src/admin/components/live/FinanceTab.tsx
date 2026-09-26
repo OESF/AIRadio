@@ -171,7 +171,7 @@ export function FinanceTab({
       <div>
         <h3 className="text-sm font-bold text-gray-300 mb-2">👤 個人所有ファンド・株式</h3>
         <p className="text-xs text-gray-400 mb-2">
-          三浦さんが実際に保有しているファンド・株式。常に金融情報の取得対象になります。
+          ご自身が実際に保有しているファンド・株式。常に金融情報の取得対象になります。
         </p>
         {financeWL.personal_holdings.length > 0 ? (
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
